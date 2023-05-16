@@ -1,9 +1,9 @@
 package com.techdevs;
 
 public class Branch {
-    private  int id,
-    private  String name;
-    private  int addressId;
+    private int id;
+    private String name;
+    private int addressId;
     private Date openHour, closeHour;
     private List<String> availableMovies;
 
