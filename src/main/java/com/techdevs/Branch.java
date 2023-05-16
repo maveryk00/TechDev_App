@@ -1,5 +1,8 @@
 package com.techdevs;
 
+import java.util.Date;
+import java.util.List;
+
 public class Branch {
     private int id;
     private String name;
@@ -32,12 +35,20 @@ public class Branch {
         this.addressId = addressId;
     }
 
-    public String getOpenHours() {
-        return openHours;
+    public Date getOpenHour() {
+        return openHour;
     }
 
-    public void setOpenHours(String openHours) {
-        this.openHours = openHours;
+    public void setOpenHour(Date openHour) {
+        this.openHour = openHour;
+    }
+
+    public Date getCloseHour() {
+        return closeHour;
+    }
+
+    public void setCloseHour(Date closeHour) {
+        this.closeHour = closeHour;
     }
 
     // Function that returns the address values taken from the database joined together
@@ -48,7 +59,7 @@ public class Branch {
         // Result set
         // values taken from result set
         // fullAddress = address.line1 + address.line2 + district.name + city.name + department.name + address.zipCode
-        return fullAddress;
+        // return fullAddress;
     }
 
     // Function that returns a boolean value indicating whether the cinema branch is open
