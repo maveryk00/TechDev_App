@@ -58,6 +58,7 @@ build/
 **/.idea/**/shelf
 **/.idea/**/shelf/*
 **/.idea/httpRequests/
+.idea/vcs.xml
 
 # AWS User-specific
 .idea/**/aws.xml
