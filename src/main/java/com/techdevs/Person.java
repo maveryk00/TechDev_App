@@ -1,8 +1,8 @@
 package com.techdevs;
 
 public class Person {
-    private int id,addressId;
-    private String name,lastname,email;
+    private int id, addressId;
+    private String name, lastname, email;
 
     public int getId() {
         return id;
