@@ -52,7 +52,7 @@ public class Branch {
     }
 
     // Function that returns the address values taken from the database joined together
-    public String getFullAddress(){
+    public String getFullAddress() {
         // Connection
         // Queries strings for the database
         // Statements
@@ -60,6 +60,7 @@ public class Branch {
         // values taken from result set
         // fullAddress = address.line1 + address.line2 + district.name + city.name + department.name + address.zipCode
         // return fullAddress;
+        return null;
     }
 
     // Function that returns a boolean value indicating whether the cinema branch is open
