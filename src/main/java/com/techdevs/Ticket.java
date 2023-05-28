@@ -1,53 +1,37 @@
 package com.techdevs;
 
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "ticket")
+
 
 public class Ticket {
 
- private int id;
- private Date date;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
- private String time,customerid,funcionid;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getCustomerid() {
-        return customerid;
-    }
-
-    public void setCustomerid(String customerid) {
-        this.customerid = customerid;
-    }
-
-    public String getFuncionid() {
-        return funcionid;
-    }
-
-    public void setFuncionid(String funcionid) {
-        this.funcionid = funcionid;
-    }
+    private long id;
+    private Date date;
+    private String time;
+    private String customerid;
+    private String funcionid;
 
 
 }
+
+
+
+
+
+
