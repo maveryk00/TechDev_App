@@ -1,40 +1,27 @@
 package com.techdevs;
 
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.text.Format;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "screen")
+
 public class Screen {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int capacity,id;
-    private String name,type;
+    private long id;
+    private String name;
+    private int capacity;
+    private String format;
+    private int branchId;
 
-  //Getters and Setters
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 }
