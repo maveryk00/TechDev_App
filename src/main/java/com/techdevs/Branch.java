@@ -1,55 +1,30 @@
 package com.techdevs;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 import java.util.List;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "branch")
+
 public class Branch {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
+    @Column(name = "addressId")
     private int addressId;
     private Date openHour, closeHour;
     private List<String> availableMovies;
 
-    // Getters and setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(int addressId) {
-        this.addressId = addressId;
-    }
-
-    public Date getOpenHour() {
-        return openHour;
-    }
-
-    public void setOpenHour(Date openHour) {
-        this.openHour = openHour;
-    }
-
-    public Date getCloseHour() {
-        return closeHour;
-    }
-
-    public void setCloseHour(Date closeHour) {
-        this.closeHour = closeHour;
-    }
 
     // Function that returns the address values taken from the database joined together
     public String getFullAddress() {
