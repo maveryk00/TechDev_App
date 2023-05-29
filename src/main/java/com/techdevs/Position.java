@@ -1,25 +1,17 @@
 package com.techdevs;
 
-public class Position extends Employee{
 
-    private int idPosition;
-    private String namePosition;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 
-    //Getters and setters
-    public int getIdPosition() {
-        return idPosition;
-    }
+public class Position extends Employee{     //no está en DB
 
-    public void setIdPosition(int idPosition) {
-        this.idPosition = idPosition;
-    }
+    private int personId;
+    private int postion;
 
-    public String getNamePosition() {
-        return namePosition;
-    }
-
-    public void setNamePosition(String namePosition) {
-        this.namePosition = namePosition;
-    }
 }
