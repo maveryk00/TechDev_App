@@ -1,18 +1,11 @@
 package com.techdevs;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
+@SpringBootApplication
 public class Main {
-    public static void main(String[] args) throws SQLException {
-
-        ResultSet resultSet = DatabaseConnection.getAllTable("person");
-        while (resultSet.next()){
-            String name = resultSet.getString(1);
-            String lastName = resultSet.getString(2);
-
-            System.out.println(name + " " + lastName);
-        }
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
     }
 }
