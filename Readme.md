@@ -16,23 +16,23 @@ Agregar las siguientes propiedades en:
 ```
 src/main/resources/application.properties
 ```
-```
-// url de la Base de Datos
+```ruby
+# url de la Base de Datos
 spring.datasource.url=jdbc:mysql://[server]:[port]/[data_base]
-// usuario de la Base de Datos
+# usuario de la Base de Datos
 spring.datasource.username=[username]
-// password de la Base de Datos
+# password de la Base de Datos
 spring.datasource.password=[password]
-// actualizar la Base de Datos segun Entities
+# actualizar la Base de Datos segun Entities
 spring.jpa.hibernate.ddl-auto=update
-// mostrar consultar sql en la consola
+# mostrar consultar sql en la consola
 spring.jpa.show-sql=true
-// puerto del server
+# puerto del server
 server.port=[port]
-// usar metehod diferentes a GET y POST
+# usar metehod diferentes a GET y POST
 spring.mvc.hiddenmethod.filter.enabled=true
-// mostrar coloren en la consola
+# mostrar coloren en la consola
 spring.output.ansi.enabled=always
-// usar nombre en camalCase en los nombres de las columnas de las tablas en la Base de Datos
+# usar nombre en camalCase en los nombres de las columnas de las tablas en la Base de Datos
 spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 ```
