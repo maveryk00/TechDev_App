@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -15,6 +16,10 @@ public class BranchService {
 
     public List<Branch> getAll() {
         return branchRepository.findAll();
+    }
+
+    public Optional<Branch> getById(int id){
+        return branchRepository.findById(id);
     }
 
 }
